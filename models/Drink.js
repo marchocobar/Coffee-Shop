@@ -28,6 +28,13 @@ Drink.init(
     image: {
             type: DataTypes.STRING,
     },
+    member_favorite: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'member',
+            key: 'id',
+        },
+    },
 },
     {
         sequelize,

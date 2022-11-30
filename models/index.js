@@ -1,13 +1,13 @@
 const Member = require('./Member');
 const Drink = require('./Drink');
 
-User.hasOne(Drink, {
-    foreignKey: 'drink_id',
+Member.hasOne(Drink, {
+    foreignKey: 'member_favorite',
     onDelete: 'NULL'
 });
 
-Project.belongsTo(User, {
-    foreignKey: 'drink_id'
+Drink.belongsToMany(Member, {
+    foreignKey: 'member_favorite'
 });
 
 module.exports = { Member, Drink };
