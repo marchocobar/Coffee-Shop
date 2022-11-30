@@ -2,24 +2,9 @@ const { Member } = require('../models');
 
 const memberdata = [
     {
-        "name": "",
-        "email": "",
-        "password": ""
-    },
-    {
-        "name": "",
-        "email": "",
-        "password": ""
-    },
-    {
-        "name": "",
-        "email": "",
-        "password": ""
-    },
-    {
-        "name": "",
-        "email": "",
-        "password": ""
+        "name": "Pete Jones",
+        "email": "petejones@email.com",
+        "password": "password"
     },
     {
         "name": "",
