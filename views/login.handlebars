@@ -1,13 +1,19 @@
  <div class="container mt-5">
-        <div class="mb-3">
-            <label class="form-label">Email address</label>
-            <input class="form-control"  placeholder="name@example.com">
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input class="form-control"  placeholder="Enter Password">
-            <button class="btn btn-outline-success mt-2">Login</button>
-          </div>  
+  <h2>Login</h2>
+    <form class="form login-form">
+      <div class="mb-3">
+        <label class="form-label" for="email-login">Email address</label>
+        <input class="form-control"  placeholder="name@example.com" id="email-login"/>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="password-login">Password</label>
+        <input class="form-control"  placeholder="Enter Password" id="password-login"/>
+        <button class="btn btn-outline-success mt-2" type="submit ">Login</button>
+      </div>  
+
+
+    </form>  
 </div>
 
 <script src="./js/login.js"></script>

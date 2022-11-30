@@ -11,7 +11,7 @@ Drink.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        drink_name: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -28,7 +28,7 @@ Drink.init(
     image: {
             type: DataTypes.STRING,
     },
-    member_favorite: {
+    member_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'member',
