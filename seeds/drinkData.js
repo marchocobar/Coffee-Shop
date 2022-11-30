@@ -5,37 +5,43 @@ const drinkdata = [
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": "" 
+        "image": "",
+        "member_favorite": ,
     },
     {
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": "" 
+        "image": "",
+        "member_favorite": ,
     },
     {
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": ""
+        "image": "",
+        "member_favorite": ,
     },
     {
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": ""
+        "image": "",
+        "member_favorite": ,
     },
     {
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": ""
+        "image": "",
+        "member_favorite": ,
     },
     {
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": ""
+        "image": "",
+        "member_favorite": ,
     },
 ];
 
