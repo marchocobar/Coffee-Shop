@@ -2,6 +2,7 @@ const { Drink } = require('../models');
 
 const drinkdata = [
     {
+
         "drink_name": "Korinna Blend",
         "description": "Bold blend of Mexican Coatepec, Costa Rican and French Colombian beans.",
         "price": 12.99,
@@ -17,25 +18,29 @@ const drinkdata = [
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": ""
+        "image": "",
+        "member_favorite": ,
     },
     {
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": ""
+        "image": "",
+        "member_favorite": ,
     },
     {
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": ""
+        "image": "",
+        "member_favorite": ,
     },
     {
         "drink_name": "",
         "description": "",
         "price": ,
-        "image": ""
+        "image": "",
+        "member_favorite": ,
     },
 ];
 

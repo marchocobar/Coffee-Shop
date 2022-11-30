@@ -2,38 +2,17 @@ const { Member } = require('../models');
 
 const memberdata = [
     {
+        "name": "Pete Jones",
+        "email": "petejones@email.com",
+        "password": "password"
+    },
+    {
         "name": "",
-        "favorite_drink": "",
         "email": "",
         "password": ""
     },
     {
         "name": "",
-        "favorite_drink": "",
-        "email": "",
-        "password": ""
-    },
-    {
-        "name": "",
-        "favorite_drink": "",
-        "email": "",
-        "password": ""
-    },
-    {
-        "name": "",
-        "favorite_drink": "",
-        "email": "",
-        "password": ""
-    },
-    {
-        "name": "",
-        "favorite_drink": "",
-        "email": "",
-        "password": ""
-    },
-    {
-        "name": "",
-        "favorite_drink": "",
         "email": "",
         "password": ""
     },
