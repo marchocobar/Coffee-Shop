@@ -1,13 +1,17 @@
 const sequelize = require('../config/connection');
-const seedGallery = require('./drinkData');
-const seedPaintings = require('./memberData');
+
+const {Drink} = require("../models");
+
+const drinkData = require('./drinkData.json');
+
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await seedDrink();
-
-  await seedMember();
+  await Drink.bulkCreate(drinkData, {
+    individualHooks: true,
+    returning: true,
+  });
 
   process.exit(0);
 };

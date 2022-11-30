@@ -4,7 +4,6 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
     const drinkData = await Drink.findAll({
       include: [
         {
@@ -28,14 +27,7 @@ router.get('/', async (req, res) => {
 
 router.get('/drink/:id', async (req, res) => {
   try {
-    const drinkData = await Drink.findByPk(req.params.id, {
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
-    });
+    const drinkData = await Drink.findByPk(req.params.id);
 
     const drink = drinkData.get({ plain: true });
 
@@ -48,10 +40,10 @@ router.get('/drink/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/memberProfile', withAuth, async (req, res) => {
+router.get('/member', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const memberData = await Member.findByPk(req.session.user_id, {
+    const memberData = await Member.findByPk(req.session.id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Drink}],
     });
@@ -70,11 +62,21 @@ router.get('/memberProfile', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect("/memberProfile");
+    res.redirect("/member");
     return;
   }
 
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  // if (req.session.logged_in) {
+  //   res.redirect("/member");
+  //   return;
+  // }
+
+  res.render('signup');
 });
 
 module.exports = router;

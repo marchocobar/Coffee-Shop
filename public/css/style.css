@@ -1,0 +1,14 @@
+.anchor-brand {
+    text-decoration: none;
+    color: #198754;
+}
+
+.anchor-brand:hover {
+    text-decoration: underline;
+    color: #4aa67b;
+}
+
+
+.bg-brand {
+    background-color: rgb(216, 215, 215);
+}
