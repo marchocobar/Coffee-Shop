@@ -18,7 +18,24 @@ Drink.init(
         description: {
             type: DataTypes.STRING,
         },
+        price: {
+            type: DataTypes.DECIMAL( 6, 2),
+            allowNull: false,
+        validate: {
+            isNumeric: true,
+        }
     },
+    image: {
+            type: DataTypes.STRING,
+    },
+    member_favorite: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'member',
+            key: 'id',
+        },
+    },
+},
     {
         sequelize,
         timestamps: false,

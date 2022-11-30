@@ -20,13 +20,6 @@ Member.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        favorite_drink: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'drink',
-                key: 'id',
-            },
-        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
