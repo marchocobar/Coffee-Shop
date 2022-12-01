@@ -9,6 +9,7 @@
 </div>
 
 {{#each drinks as |drink| }}
+<div class="col">
 <div class="card" style="width: 18rem;">
   <img src="{{drink.image}}" class="card-img-top">
   <div class="card-body">
@@ -16,5 +17,6 @@
     <p class="card-text">{{drink.description}}</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
+</div>
 </div>
 {{/each}}
