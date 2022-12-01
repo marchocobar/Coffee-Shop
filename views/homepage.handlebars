@@ -10,12 +10,13 @@
 
 {{#each drinks as |drink| }}
 <div class="col col-md-3 mt-2">
-<div class="card" style="width: 18rem;">
+<div class="card text-center" style="width: 16rem;">
   <img src="{{drink.image}}" class="card-img-top">
   <div class="card-body">
     <h5 class="card-title">{{drink.name}}</h5>
     <p class="card-text">{{drink.description}}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p class="card-text">${{drink.price}}</p>
+    <a href="#" class="btn btn-primary">Add To List</a>
   </div>
 </div>
 </div>
