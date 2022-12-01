@@ -12,12 +12,6 @@ const seedAll = async () => {
 
   await seedDrink();
 
-  // for (const drink of drinkData) {
-  //   await Drink.create({
-  //     ...drink,
-  //     member_id: members[Math.floor(Math.random() * members.length)].id,
-  //   });
-  // }
 
   process.exit(0);
 };
