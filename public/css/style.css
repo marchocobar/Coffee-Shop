@@ -1,14 +1,28 @@
+:root {
+    --silver: #C9B7AD;
+    --brown: #54311a;
+  }
+  
+body {
+    background-color: var(--silver);
+  }
+
 .anchor-brand {
     text-decoration: none;
-    color: #198754;
+    color: var(--brown);
+    font-size: 40px;
 }
 
-.anchor-brand:hover {
+/* .anchor-brand:hover {
     text-decoration: underline;
     color: #4aa67b;
-}
+} */
 
 
 .bg-brand {
+    background-color: rgb(216, 215, 215);
+}
+
+.card-body {
     background-color: rgb(216, 215, 215);
 }
