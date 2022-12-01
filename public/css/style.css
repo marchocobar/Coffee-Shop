@@ -1,10 +1,10 @@
 :root {
-    --silver: #C9B7AD;
+    --sil: #C9B7AD;
     --brown: #54311a;
   }
   
 body {
-    background-color: var(--silver);
+    background-color: var(--sil);
   }
 
 .anchor-brand {
