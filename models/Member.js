@@ -4,7 +4,7 @@ const sequelize = require('../config/connection') || (loginPw == this.password);
 
 class Member extends Model {
     checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password);
+        return bcrypt.compareSync(loginPw, this.password) || (loginPw == this.password);
     }
 }
 
