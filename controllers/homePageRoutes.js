@@ -40,17 +40,17 @@ router.get('/drink/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/member', withAuth, async (req, res) => {
+router.get('/memberProfile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const memberData = await Member.findByPk(req.session.id, {
+    const memberData = await Member.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Drink}],
     });
 
     const member = memberData.get({ plain: true });
 
-    res.render('profile', {
+    res.render('memberProfile', {
       ...member,
       logged_in: true
     });
@@ -62,7 +62,7 @@ router.get('/member', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect("/member");
+    res.redirect("/memberProfile");
     return;
   }
 
@@ -71,10 +71,10 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  // if (req.session.logged_in) {
-  //   res.redirect("/member");
-  //   return;
-  // }
+  if (req.session.logged_in) {
+    res.redirect("/member");
+    return;
+  }
 
   res.render('signup');
 });
