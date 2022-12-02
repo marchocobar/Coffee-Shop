@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Member } = require('../../models');
 
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     const memberData = await Member.create(req.body);
 
@@ -50,6 +50,7 @@ router.post('/login', async (req, res) => {
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
+    console.log("Logout Clicked");
     req.session.destroy(() => {
       res.status(204).end();
     });
