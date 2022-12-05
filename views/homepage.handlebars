@@ -9,10 +9,10 @@
     <h5 class="card-title" id="drink-name">{{drink.name}}</h5>
     <p class="card-text" id="drink-desc">{{drink.description}}</p>
     <p class="card-text" id="drink-price">${{drink.price}}</p>
-    <button type="submit" class="btn" data-id="{{drink.id}}">Add To List</button>
+    <button data-id="{{drink.id}}" class="btn addBTN" data-id="{{drink.id}}">Add To List</button>
   </div>
 </div>
 </div>
 {{/each}}
 
-<script src="./js/homepage.js"></script>
+<script src="./js/shoppingList.js"></script>
