@@ -11,17 +11,18 @@
 <body>
   <header class="navbar bg-brand">
     <nav class="container-fluid">
-      <h1 class="navbar-brand">
-        <a href="/" class="anchor-brand">Coffee Cravers</a>
-      </h1>
+        <a href="/" class="navbar-brand">
+        <img src="image/CoffeeCraversLogo.png" width="200"></img>
+        </a>
+      
       <div class="d-flex">
                 <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a class="btn btn-outline-success me-2" href="/memberProfile">PROFILE</a> 
-        <a class="btn btn-outline-success" id="logout">LOGOUT</a>
+        <a class="btn btn-outline me-2" href="/memberProfile">PROFILE</a> 
+        <a class="btn btn-outline" id="logout">LOGOUT</a>
         {{else}}
-        <a class="btn btn-outline-success me-2" href="/login">LOGIN</a>
-        <a class="btn btn-outline-success" href="/signup">SIGNUP</a>
+        <a class="btn btn-outline me-2" href="/login">LOGIN</a>
+        <a class="btn btn-outline" href="/signup">SIGNUP</a>
         {{/if}}
        
       </div>

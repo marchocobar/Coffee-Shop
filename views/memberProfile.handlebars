@@ -3,7 +3,7 @@
 <h3>My Shopping List</h3>
 
 {{#if drinks.length}}
-
+<div class="col col-md-3 mt-2 drink-list">
 {{#each drinks as |drink| }}
 <div class="card" style="width: 18rem;">
   <img src="{{drink.image}}" class="card-img-top">
@@ -15,5 +15,6 @@
   </div>
 </div>
 {{/each}}
-
+</div>
 {{/if}}
+

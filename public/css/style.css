@@ -13,11 +13,6 @@ body {
     font-size: 40px;
 }
 
-/* .anchor-brand:hover {
-    text-decoration: underline;
-    color: #4aa67b;
-} */
-
 
 .bg-brand {
     background-color: rgb(216, 215, 215);
@@ -25,4 +20,24 @@ body {
 
 .card-body {
     background-color: rgb(216, 215, 215);
+}
+
+.btn  {
+    background-color: var(--brown);
+    color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--brown);
+    border: solid thin var(--brown);
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    max-height: 100%;
 }

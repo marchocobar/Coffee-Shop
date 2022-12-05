@@ -41,6 +41,8 @@ router.get('/drink/:id', async (req, res) => {
   }
 });
 
+
+
 // Use withAuth middleware to prevent access to route
 router.get('/memberProfile', withAuth, async (req, res) => {
   try {
