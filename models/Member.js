@@ -1,11 +1,21 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection') || (loginPw == this.password);
+var validator = require('validator');
+
 
 class Member extends Model {
     checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password) || (loginPw == this.password);
+
+        if (!validator.isAlphanumeric(loginPw)) {
+            alert("Password must contain letters and numbers");
+        } else {
+            return bcrypt.compareSync(loginPw, this.password) || (loginPw == this.password);
+        }
+
+       
     }
+
 }
 
 Member.init(
