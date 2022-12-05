@@ -2,15 +2,17 @@
 
 
 {{#each drinks as |drink| }}
-<div class="col col-md-3 mt-2">
+<div class="col col-md-3 mt-2 drink-list">
 <div class="card text-center" style="width: 16rem;">
   <img src="{{drink.image}}" class="card-img-top">
   <div class="card-body">
-    <h5 class="card-title">{{drink.name}}</h5>
-    <p class="card-text">{{drink.description}}</p>
-    <p class="card-text">${{drink.price}}</p>
-    <a href="#" class="btn btn-primary">Add To List</a>
+    <h5 class="card-title" id="drink-name">{{drink.name}}</h5>
+    <p class="card-text" id="drink-desc">{{drink.description}}</p>
+    <p class="card-text" id="drink-price">${{drink.price}}</p>
+    <button type="submit" class="btn" data-id="{{drink.id}}">Add To List</button>
   </div>
 </div>
 </div>
 {{/each}}
+
+<script src="./js/homepage.js"></script>
