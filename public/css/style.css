@@ -41,3 +41,7 @@ body {
 .navbar-brand img {
     max-height: 100%;
 }
+
+h2, h3 {
+    color: var(--brown);
+}

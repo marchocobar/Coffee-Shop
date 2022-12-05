@@ -11,6 +11,7 @@ const seedAll = async () => {
   await seedMember();
 
   await seedDrink();
+  
 
 
   process.exit(0);

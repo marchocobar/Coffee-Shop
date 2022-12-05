@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Drink extends Model {}
+class Drink extends Model { }
 
 Drink.init(
     {
@@ -19,23 +19,23 @@ Drink.init(
             type: DataTypes.STRING,
         },
         price: {
-            type: DataTypes.DECIMAL( 6, 2),
+            type: DataTypes.DECIMAL(6, 2),
             allowNull: false,
-        validate: {
-            isNumeric: true,
-        }
-    },
-    image: {
+            validate: {
+                isNumeric: true,
+            }
+        },
+        image: {
             type: DataTypes.STRING,
-    },
-    member_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'member',
-            key: 'id',
+        },
+        member_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'member',
+                key: 'id',
+            },
         },
     },
-},
     {
         sequelize,
         timestamps: false,
