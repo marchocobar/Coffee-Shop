@@ -10,19 +10,19 @@ const drinkData = [
     },
     {
         "name": "Marissa Blend",
-        "description": "A well balanced blend of Ethiopian Mocha and Java Mountain Supreme.",
+        "description": "A lovely blend of Sumatra Mandheling, Mocha and French Mexican coffee",
         "price": 12.99,
         "image": "image/p2.png" 
     },
     {
         "name": "Jared Blend",
-        "description": "A well balanced blend of Ethiopian Mocha and Java Mountain Supreme.",
+        "description": "A lighter blend of Colombian Excelso, Ethiopian and Brazil Bourbon Santos.",
         "price": 12.99,
         "image": "image/p3.png" 
     },
     {
         "name": "Juan Blend",
-        "description": "A well balanced blend of Ethiopian Mocha and Java Mountain Supreme.",
+        "description": "A marriage of both Medium and French Roast Mexican Altura beans. Well rounded body and smoothness.",
         "price": 12.99,
         "image": "image/p4.png" 
     },
