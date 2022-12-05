@@ -6,7 +6,7 @@ router.post('/signup', async (req, res) => {
     const memberData = await Member.create(req.body);
 
     req.session.save(() => {
-      req.session.user_id = memberData.id;
+      req.session.member_id = memberData.id;
       req.session.logged_in = true;
 
       res.status(200).json(memberData);
@@ -23,7 +23,8 @@ router.post('/login', async (req, res) => {
     if (!memberData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: 'Incorrect email, please try again' });
+        
       return;
     }
 
@@ -32,12 +33,13 @@ router.post('/login', async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: 'Incorrect password, please try again' });
+
       return;
     }
 
     req.session.save(() => {
-      req.session.user_id = memberData.id;
+      req.session.member_id = memberData.id;
       req.session.logged_in = true;
       
       res.json({ member: memberData, message: 'You are now logged in!' });
