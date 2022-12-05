@@ -18,6 +18,7 @@
       <div class="d-flex">
                 <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
+        {{!-- <h2 class="me-3"> Welcome, {{name}}!</h2> --}}
         <a class="btn btn-outline me-2" href="/memberProfile">PROFILE</a> 
         <a class="btn btn-outline" id="logout">LOGOUT</a>
         {{else}}
