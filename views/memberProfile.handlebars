@@ -3,18 +3,19 @@
 <h3>My Shopping List</h3>
 
 {{#if drinks.length}}
-<div class="col col-md-3 mt-2 drink-list">
+
 {{#each drinks as |drink| }}
+<div class="col col-md-3 mt-2 drink-list">
 <div class="card" style="width: 18rem;">
   <img src="{{drink.image}}" class="card-img-top">
   <div class="card-body">
     <h5 class="card-title">{{drink.name}}</h5>
     <p class="card-text">{{drink.description}}</p>
     <p class="card-text">${{drink.price}}</p>
-    <button  data-id="{{drink.id}}" class="btn btn-primary removeBTN" >Remove from List</button>
+    <button  data-id="{{drink.id}}" class="btn btn-outline removeBTN" >Remove from List</button>
   </div>
 </div>
-{{/each}}
 </div>
+{{/each}}
 {{/if}}
 
