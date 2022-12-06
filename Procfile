@@ -1,0 +1,1 @@
+web: node seeds.js && node server.js
