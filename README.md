@@ -12,6 +12,14 @@ WHEN I login my profile
 THEN I am presented with coffee items I saved in my shopping list
 ```
 ## Usage
-To use this program create an account through the sign up page, or login to access your shopping list.Feel free to view the [Coffee Cravers Web Application](https://watch.screencastify.com/v/J2S4KcrUUaxdag8EZW4h).
+To use this program create an account through the sign up page, or login to access your shopping list.Feel free to view the [Coffee Cravers Web Application](https://coffee-cravers.herokuapp.com/).
 
 **Here’s a screenshot of the application:**
+![Screenshot](public/image/Screen%20Shot%202022-12-05%20at%209.45.07%20PM.png)
+
+## Installation
+Application uses Node, Express, SQL, Sequelize, Handlebars and Heroku
+
+## License
+
+License under MIT
